@@ -1,6 +1,7 @@
 # TestTask
 
 ### Инструкция для запуска:
+(Предварительно создать папку, например, через mkdir)
 1. Клонируем репозиторий
 ```
 git clone https://github.com/raralinar/TestTask.git
