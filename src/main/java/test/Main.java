@@ -9,7 +9,7 @@ public class Main {
         Flights flightTimes = new Flights(ReadJsonFile.readFile("tickets.json"));
         System.out.println("Минимальное время полета между городами Владивосток и Тель-Авив для каждого авиаперевозчика (в минутах): " +
                 flightTimes.getMin() + "\n" +
-                "Разницу между средней ценой  и медианой для полета между городами  Владивосток и Тель-Авив: " +
+                "Разница между средней ценой  и медианой для полета между городами Владивосток и Тель-Авив: " +
                 flightTimes.getPriceDifference());
     }
 }
