@@ -41,7 +41,7 @@ public class Flights {
         Collections.sort(prices);
         int average = prices.stream().reduce(0, Integer::sum)/prices.size();
         double median = prices.size() % 2 == 0 ? prices.stream().skip(prices.size()/2-1).limit(2).reduce(0, Integer::sum)/2 : prices.stream().skip(prices.size()/2).findFirst().get();
-        return median - average;
+        return Math.abs(median - average);
     }
 
 }
