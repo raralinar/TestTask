@@ -18,6 +18,9 @@ public class Flights {
         for (Object ticket : tickets) {
             SimpleDateFormat format = new SimpleDateFormat("dd.MM.yy HH:mm");
             JSONObject ticket1 = (JSONObject) ticket;
+            if (!ticket1.get("origin_name").equals("Владивосток") || !ticket1.get("destination_name").equals("Тель-Авив")) {
+                continue;
+            }
             String start = ticket1.get("departure_date") + " " + ticket1.get("departure_time");
             String stop = ticket1.get("arrival_date") + " " + ticket1.get("arrival_time");
             Date d1 = format.parse(start);
@@ -36,6 +39,9 @@ public class Flights {
         List<Integer> prices = new ArrayList<>();
         for (Object ticket : tickets) {
             JSONObject ticket1 = (JSONObject) ticket;
+            if (!ticket1.get("origin_name").equals("Владивосток") || !ticket1.get("destination_name").equals("Тель-Авив")) {
+                continue;
+            }
             prices.add(Integer.parseInt(ticket1.get("price").toString()));
         }
         Collections.sort(prices);
